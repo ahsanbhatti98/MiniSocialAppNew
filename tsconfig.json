@@ -1,0 +1,44 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "strictFunctionTypes": true,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["*"],
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@svgs/*": ["assets/svgs/*"],
+      "@images/*": ["assets/images/*"],
+      "@icons/*": ["assets/icons/*"],
+      "@components/*": ["components/*"],
+      "@config/*": ["config/*"],
+      "@constants/*": ["constants/*"],
+      "@containers/*": ["containers/*"],
+      "@hooks/*": ["hooks/*"],
+      "@i18n/*": ["i18n/*"],
+      "@models/*": ["models/*"],
+      "@queryClient/*": ["queryClient/*"],
+      "@screens/*": ["screens/*"],
+      "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@reduxStore/*": ["redux-store/*"],
+      "@reduxStore": ["redux-store"]
+
+      // add more as needed
+    }
+  },
+  "exclude": ["./android/**/*", "./ios/**/*", "./node_modules/**/*"],
+  "include": [
+    "src",
+    "src/types/image.d.ts",
+    "src/types/svg.d.ts",
+    "src/types/env.d.ts"
+  ]
+}

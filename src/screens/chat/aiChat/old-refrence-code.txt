@@ -1,0 +1,387 @@
+// New
+
+// import {
+//   Platform,
+//   StyleSheet,
+//   Pressable,
+//   SafeAreaView,
+//   ActivityIndicator,
+//   TextInput,
+//   Text,
+//   ScrollView,
+//   Dimensions,
+//   View,
+// } from 'react-native';
+
+// import React, {useRef, useState} from 'react';
+// import EventSource from 'react-native-sse';
+// import 'react-native-url-polyfill/auto';
+// import {useTypedSelector} from '@src/hooks';
+// import {BASE_PATH} from '@src/api/config';
+// import {CustomImage} from '@src/components';
+// import {Images} from '@src/config';
+// import {Route, RouteProp, useRoute} from '@react-navigation/native';
+// import {ChatRoutesTypes} from './chat.types';
+// import {GiftedChat, IMessage} from 'react-native-gifted-chat';
+
+// const screenWidth = Dimensions.get('screen').width;
+
+// export const Chat = () => {
+//   const route = useRoute<RouteProp<ChatRoutesTypes, 'ChatScreen'>>();
+//   const {sessionId} = route.params;
+//   const [sendLoader, setSendLoader] = useState(false);
+//   const token = useTypedSelector(state => state.auth.token);
+
+//   const eventSourceRef = useRef<EventSource | null>(null);
+
+//   const [text, setText] = useState('');
+//   const [messages, setMessages] = useState<IMessage[]>([]);
+
+//   // Function to handle message stream
+//   const handleStreamClick = async () => {
+//     console.log('handleStreamClick');
+//     eventSourceRef.current = new EventSource(
+//       `${'http://10.0.2.2:8000'}${BASE_PATH}chat/stream?session_id=${sessionId}&user_query=${text}`,
+//       {
+//         headers: {
+//           'Content-Type': 'application/json',
+//           Authorization: `Bearer ${token}`,
+//         },
+//         method: 'GET',
+//       },
+//     );
+
+//     setText('');
+//     setSendLoader(true);
+
+//     let accumulatedText = '';
+//     const messageId = Date.now(); // unique ID for current streaming message
+
+//     // Add empty bot message once to start accumulating chunks
+//     setMessages(previousMessages => [
+//       ...previousMessages,
+//       {
+//         _id: messageId,
+//         text: '',
+//         createdAt: new Date(),
+//         user: {
+//           _id: 2,
+//           name: 'Bot',
+//         },
+//       },
+//     ]);
+
+//     eventSourceRef.current.addEventListener('message', event => {
+//       try {
+//         const data = event.data ? JSON.parse(event.data) : null;
+
+//         if (data?.event === 'completed') {
+//           handleStopStream();
+//           setSendLoader(false);
+//           return;
+//         }
+
+//         // Append new chunk to existing text
+//         accumulatedText += data?.data || '';
+
+//         // Update the specific message bubble
+//         setMessages(prevMessages =>
+//           prevMessages.map(msg =>
+//             msg._id === messageId
+//               ? {
+//                   ...msg,
+//                   text: accumulatedText,
+//                 }
+//               : msg,
+//           ),
+//         );
+//       } catch (error) {
+//         console.log('Error parsing SSE data:', error);
+//         handleStopStream();
+//       }
+//     });
+//   };
+
+//   // Stop SSE stream
+//   const handleStopStream = () => {
+//     if (eventSourceRef.current) {
+//       eventSourceRef.current.close();
+//       eventSourceRef.current = null;
+//     }
+//   };
+
+//   // Function to send a message
+//   const handleSend = async () => {
+//     if (text.trim().length === 0) return;
+//     try {
+//       setSendLoader(true);
+//       const newMessage = {
+//         _id: new Date().getTime(),
+//         text,
+//         createdAt: new Date(),
+//         user: {
+//           _id: 1, // Adjust user ID for sender
+//           name: 'User',
+//         },
+//       };
+//       setMessages(previousMessages => [...previousMessages, newMessage]);
+//       await handleStreamClick();
+//     } catch (error) {
+//       console.log(error, 'error');
+//     }
+//   };
+
+//   const onTextChange = (v: string) => {
+//     setText(v);
+//   };
+
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <GiftedChat
+//         messages={messages}
+//         onSend={() => handleSend()}
+//         inverted={false}
+//         user={{
+//           _id: 1, // User's ID (you can make this dynamic)
+//         }}
+//         renderInputToolbar={() => (
+//           <View style={styles.inputContainer}>
+//             <TextInput
+//               multiline
+//               value={text}
+//               onChangeText={onTextChange}
+//               style={styles.textInput}
+//               placeholder="Ask a question..."
+//               placeholderTextColor={'black'}
+//             />
+//             {sendLoader ? (
+//               <ActivityIndicator size={'small'} color={'black'} />
+//             ) : (
+//               <Pressable
+//                 onPress={handleSend}
+//                 hitSlop={{top: 20, bottom: 50, left: 20, right: 20}}>
+//                 <CustomImage source={Images.AddIcon} style={styles.sendIcon} />
+//               </Pressable>
+//             )}
+//           </View>
+//         )}
+//       />
+//     </SafeAreaView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     marginBottom: 0,
+//     backgroundColor: 'white',
+//     flex: 1,
+//   },
+//   inputContainer: {
+//     flexDirection: 'row',
+//     alignItems: 'flex-end',
+//     paddingHorizontal: 10,
+//     paddingBottom: 7,
+//   },
+//   textInput: {
+//     borderWidth: 0.5,
+//     paddingTop: 12,
+//     padding: 12,
+//     width: screenWidth * 0.8,
+//     borderRadius: 30,
+//     fontSize: 16,
+//     color: 'black',
+//     maxHeight: 120,
+//   },
+//   sendIcon: {
+//     width: 25,
+//     height: 25,
+//     marginLeft: 10,
+//   },
+// });
+
+/// Old
+
+// import {
+//   Platform,
+//   StyleSheet,
+//   Pressable,
+//   SafeAreaView,
+//   ActivityIndicator,
+//   TextInput,
+//   Text,
+//   ScrollView,
+//   Dimensions,
+//   View,
+// } from 'react-native';
+
+// import React, {useRef, useState} from 'react';
+// import EventSource from 'react-native-sse';
+// import 'react-native-url-polyfill/auto';
+// import {useTypedSelector} from '@src/hooks';
+// import {BASE_PATH} from '@src/api/config';
+// import {CustomImage} from '@src/components';
+// import {Images} from '@src/config';
+// import {Route, RouteProp, useRoute} from '@react-navigation/native';
+// import {ChatRoutesTypes} from './chat.types';
+// import {GiftedChat, IMessage} from 'react-native-gifted-chat';
+
+// const screenWidth = Dimensions.get('screen').width;
+
+// export const Chat = () => {
+//   const route = useRoute<RouteProp<ChatRoutesTypes, 'ChatScreen'>>();
+//   const {sessionId} = route.params;
+//   const [sendLoader, setSendLoader] = useState(false);
+//   const token = useTypedSelector(state => state.auth.token);
+
+//   const eventSourceRef = useRef<EventSource | null>(null);
+
+//   const [text, setText] = useState('');
+//   const [messages, setMessages] = useState<IMessage[]>([]);
+
+//   // Function to handle message stream
+//   const handleStreamClick = async () => {
+//     console.log('handleStreamClick');
+//     // Directly from your own SSE-enabled API
+//     eventSourceRef.current = new EventSource(
+//       `${'http://10.0.2.2:8000'}${BASE_PATH}chat/stream?session_id=${sessionId}&user_query=${text}`,
+//       {
+//         headers: {
+//           'Content-Type': 'application/json',
+//           Authorization: `Bearer ${token}`,
+//         },
+//         method: 'GET',
+//       },
+//     );
+
+//     setText('');
+
+//     let textValue = '';
+
+//     // Event listener for SSE messages
+//     eventSourceRef.current.addEventListener('message', async event => {
+//       try {
+//         const data = event.data ? JSON.parse(event.data) : null;
+//         if (data?.event === 'completed') {
+//           handleStopStream();
+//           setSendLoader(false);
+//         } else if (data?.event === 'message') {
+//           textValue = textValue + data?.data;
+//           setMessages(previousMessages => [
+//             ...previousMessages,
+//             {
+//               _id: new Date().getTime(),
+//               text: textValue,
+//               createdAt: new Date(),
+//               user: {
+//                 _id: 2, // Adjust user ID for bot response
+//                 name: 'Bot',
+//               },
+//             },
+//           ]);
+//         } else {
+//           console.log('Unknown event:', data);
+//           handleStopStream();
+//           setSendLoader(false);
+//         }
+//       } catch (error) {
+//         console.log('Error parsing SSE data:', error);
+//         handleStopStream();
+//       }
+//     });
+//   };
+
+//   // Stop SSE stream
+//   const handleStopStream = () => {
+//     if (eventSourceRef.current) {
+//       eventSourceRef.current.close();
+//       eventSourceRef.current = null;
+//     }
+//   };
+
+//   // Function to send a message
+//   const handleSend = async () => {
+//     if (text.trim().length === 0) return;
+//     try {
+//       setSendLoader(true);
+//       const newMessage = {
+//         _id: new Date().getTime(),
+//         text,
+//         createdAt: new Date(),
+//         user: {
+//           _id: 1, // Adjust user ID for sender
+//           name: 'User',
+//         },
+//       };
+//       setMessages(previousMessages => [newMessage, ...previousMessages]);
+//       await handleStreamClick();
+//     } catch (error) {
+//       console.log(error, 'error');
+//     }
+//   };
+
+//   const onTextChange = (v: string) => {
+//     setText(v);
+//   };
+
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <GiftedChat
+//         messages={messages}
+//         onSend={() => handleSend()}
+//         user={{
+//           _id: 1, // User's ID (you can make this dynamic)
+//         }}
+//         renderInputToolbar={() => (
+//           <View style={styles.inputContainer}>
+//             <TextInput
+//               multiline
+//               value={text}
+//               onChangeText={onTextChange}
+//               style={styles.textInput}
+//               placeholder="Ask a question..."
+//               placeholderTextColor={'black'}
+//             />
+//             {sendLoader ? (
+//               <ActivityIndicator size={'small'} color={'black'} />
+//             ) : (
+//               <Pressable
+//                 onPress={handleSend}
+//                 hitSlop={{top: 20, bottom: 50, left: 20, right: 20}}>
+//                 <CustomImage source={Images.AddIcon} style={styles.sendIcon} />
+//               </Pressable>
+//             )}
+//           </View>
+//         )}
+//       />
+//     </SafeAreaView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     marginBottom: 0,
+//     backgroundColor: 'white',
+//     flex: 1,
+//   },
+//   inputContainer: {
+//     flexDirection: 'row',
+//     alignItems: 'flex-end',
+//     paddingHorizontal: 10,
+//     paddingBottom: 7,
+//   },
+//   textInput: {
+//     borderWidth: 0.5,
+//     paddingTop: 12,
+//     padding: 12,
+//     width: screenWidth * 0.8,
+//     borderRadius: 30,
+//     fontSize: 16,
+//     color: 'black',
+//     maxHeight: 120,
+//   },
+//   sendIcon: {
+//     width: 25,
+//     height: 25,
+//     marginLeft: 10,
+//   },
+// });

@@ -1,0 +1,17 @@
+dist
+node_modules
+.next
+build
+scripts
+jest.config.js
+commitlint.config.ts
+tsconfig.json
+README.md
+yarn.lock
+package.json
+package-lock.json
+.prettierrc.js
+.eslintrc.js
+ios/
+android/
+__tests__/

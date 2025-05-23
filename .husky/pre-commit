@@ -1,0 +1,4 @@
+# Run TypeScript check
+npx tsc --noEmit
+
+npx lint-staged

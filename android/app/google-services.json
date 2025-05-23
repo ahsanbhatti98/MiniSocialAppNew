@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "999404798407",
+    "project_id": "boiler-plate-22",
+    "storage_bucket": "boiler-plate-22.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999404798407:android:5104c979ff09c7ced959e2",
+        "android_client_info": {
+          "package_name": "com.boilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999404798407-ap6rmbanpbjv3kcgg73ru5itduiko9r9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm7b6Gm-v1oKNp3W6NyIzfb-c6X3ZKbAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999404798407-ap6rmbanpbjv3kcgg73ru5itduiko9r9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "999404798407-0pss926kc895i7fbh645aku82334fqm9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.boilerplate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

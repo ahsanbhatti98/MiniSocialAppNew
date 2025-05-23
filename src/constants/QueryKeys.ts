@@ -1,0 +1,7 @@
+enum QueryKeys {
+  GET_PENDING_TASK_ID = 'GET_PENDING_TASK_ID',
+  GET_CHAT_SESSION = 'GET_CHAT_SESSION',
+  GET_CHAT_HISTORY = 'GET_CHAT_HISTORY',
+}
+
+export default QueryKeys;
