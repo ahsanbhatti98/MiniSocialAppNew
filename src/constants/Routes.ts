@@ -5,7 +5,6 @@ export enum AuthRoutes {
 
 export enum HomeRoutes {
   Home = 'Home',
-  Profile = 'Profile',
   Details = 'Details',
   Chat = 'Chat',
 }

@@ -18,7 +18,7 @@ const reels: Reel[] = [
   {id: '3', uri: 'https://www.w3schools.com/html/mov_bbb.mp4', liked: false},
 ];
 
-export const Profile = () => {
+export const Feeds = () => {
   const user = useTypedSelector(state => state.auth.user);
   console.log('user in profile:', user);
 
@@ -28,7 +28,7 @@ export const Profile = () => {
         source={{uri: item.uri}}
         style={{width: '100%', height: 300}}
         resizeMode="cover"
-        repeat={false}
+        repeat
         paused={false}
         muted
       />
@@ -55,9 +55,10 @@ export const Profile = () => {
                   }}
                 />
               )}
-              <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+              <Text bold size={20}>
                 {user.name}
               </Text>
+              <Text size={26} bold></Text>
             </View>
           )
         }

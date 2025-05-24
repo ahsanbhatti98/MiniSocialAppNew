@@ -33,7 +33,7 @@ export const Sessions = () => {
   }, []);
 
   const handleChat = (receiver: any) => {
-    // console.log('Navigating to chat with:', receiver);
+    console.log('Navigating to chat with:', receiver);
     NavigationService.navigate('App', {
       screen: 'Chat',
       params: {

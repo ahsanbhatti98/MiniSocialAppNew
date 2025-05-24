@@ -33,10 +33,8 @@ const AppStack = () => {
         component={Home}
         options={{headerShown: false}}
       />
-      {/* <Stack.Screen name="Profile" component={Profile} /> */}
-      <Stack.Screen name="Details" component={Details} />
+
       <Stack.Screen name="Chat" component={Chat} />
-      {/* Add more screens here */}
     </Stack.Navigator>
   );
 };

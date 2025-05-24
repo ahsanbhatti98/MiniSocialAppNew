@@ -2,9 +2,9 @@ import React from 'react';
 import {CustomTabBar} from '@components/custom-tab-bar';
 import Images from '@config/images';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Profile} from '../profile';
-import {Sessions} from '../sessions';
-import {Setting} from '../setting';
+import {Feeds} from './feeds';
+import {Sessions} from './sessions';
+import {Setting} from './setting';
 
 const Tab = createBottomTabNavigator();
 export const Home = () => {
@@ -21,7 +21,7 @@ export const Home = () => {
         headerShadowVisible: true,
       }}
       tabBar={props => <CustomTabBar {...props} icons={tabIcons} />}>
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Feeds" component={Feeds} />
       <Tab.Screen name="Session" component={Sessions} />
       <Tab.Screen
         name="Setting"
