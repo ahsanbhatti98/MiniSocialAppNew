@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* boilerPlateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* boilerPlateTests.m */; };
+		00E356F31AD99517003FC87E /* MiniSocialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MiniSocialAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -43,39 +43,39 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = boilerPlate;
+			remoteInfo = "MiniSocialApp";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* boilerPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = boilerPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* MiniSocialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniSocialAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* boilerPlateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = boilerPlateTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* MiniSocialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MiniSocialAppTests.m"; sourceTree = "<group>"; };
 		04003F6659FA4298898B0C38 /* SF-Pro-Display-HeavyItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-HeavyItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-HeavyItalic.otf"; sourceTree = "<group>"; };
 		13937BB2F46847E6AC4C47E7 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Heavy.otf"; path = "../src/assets/fonts/SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* boilerPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boilerPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = boilerPlate/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = boilerPlate/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = boilerPlate/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = boilerPlate/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = boilerPlate/main.m; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = boilerPlate/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* MiniSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniSocialApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "MiniSocialApp/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "MiniSocialApp/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MiniSocialApp/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "MiniSocialApp/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "MiniSocialApp/main.m"; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = MiniSocialApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		22F744709A9A4242A4FBC241 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Black.otf"; path = "../src/assets/fonts/SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
-		3A40303B3D31933311A32C2D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = boilerPlate/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-boilerPlate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerPlate.debug.xcconfig"; path = "Target Support Files/Pods-boilerPlate/Pods-boilerPlate.debug.xcconfig"; sourceTree = "<group>"; };
+		3A40303B3D31933311A32C2D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = MiniSocialApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-MiniSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp.debug.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3F0A6773F39D610B3186E321 /* Pods_boilerPlate_boilerPlateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerPlate_boilerPlateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		558675D2F1714481A6BF4B52 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-RegularItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-boilerPlate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerPlate.release.xcconfig"; path = "Target Support Files/Pods-boilerPlate/Pods-boilerPlate.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-boilerPlate-boilerPlateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerPlate-boilerPlateTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-MiniSocialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp.release.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6432BEFD4BA941AAA71B4EFE /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Light.otf"; path = "../src/assets/fonts/SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		731438C41B9A44C897ACC210 /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-LightItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; };
 		75597B9F23664362973576FB /* SF-Pro-Display-UltralightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-UltralightItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-UltralightItalic.otf"; sourceTree = "<group>"; };
 		7B791B1CC04A43E6A730C15E /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-MediumItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = boilerPlate/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-boilerPlate-boilerPlateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerPlate-boilerPlateTests.release.xcconfig"; path = "Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "MiniSocialApp/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A1151C632DC4F38E007F9356 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A1894A812DA690340047C0D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A1BE0D242DA67CA70027A2FD /* boilerPlate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = boilerPlate.entitlements; path = boilerPlate/boilerPlate.entitlements; sourceTree = "<group>"; };
+		A1BE0D242DA67CA70027A2FD /* MiniSocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MiniSocialApp.entitlements; path = MiniSocialApp/MiniSocialApp.entitlements; sourceTree = "<group>"; };
 		A5086C5091FB40D9AF8B5B62 /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-ThinItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		AB6A2D6BD4F54D04816CEE26 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Bold.otf"; path = "../src/assets/fonts/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		AE1A6513A84148E593B66FFE /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Ultralight.otf"; path = "../src/assets/fonts/SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
@@ -111,13 +111,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* boilerPlateTests */ = {
+		00E356EF1AD99517003FC87E /* MiniSocialAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* boilerPlateTests.m */,
+				00E356F21AD99517003FC87E /* MiniSocialAppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = boilerPlateTests;
+			path = "MiniSocialAppTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -128,10 +128,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* boilerPlate */ = {
+		13B07FAE1A68108700A75B9A /* MiniSocialApp */ = {
 			isa = PBXGroup;
 			children = (
-				A1BE0D242DA67CA70027A2FD /* boilerPlate.entitlements */,
+				A1BE0D242DA67CA70027A2FD /* MiniSocialApp.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				A1894A812DA690340047C0D4 /* GoogleService-Info.plist */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -142,7 +142,7 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				3A40303B3D31933311A32C2D /* PrivacyInfo.xcprivacy */,
 			);
-			name = boilerPlate;
+			name = "MiniSocialApp";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -191,9 +191,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* boilerPlate */,
+				13B07FAE1A68108700A75B9A /* MiniSocialApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* boilerPlateTests */,
+				00E356EF1AD99517003FC87E /* MiniSocialAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -207,8 +207,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* boilerPlate.app */,
-				00E356EE1AD99517003FC87E /* boilerPlateTests.xctest */,
+				13B07F961A680F5B00A75B9A /* MiniSocialApp.app */,
+				00E356EE1AD99517003FC87E /* MiniSocialAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,10 +216,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-boilerPlate.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-boilerPlate.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-boilerPlate-boilerPlateTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-boilerPlate-boilerPlateTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-MiniSocialApp.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-MiniSocialApp.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -227,9 +227,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* boilerPlateTests */ = {
+		00E356ED1AD99517003FC87E /* MiniSocialAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "boilerPlateTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MiniSocialAppTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -243,14 +243,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = boilerPlateTests;
-			productName = boilerPlateTests;
-			productReference = 00E356EE1AD99517003FC87E /* boilerPlateTests.xctest */;
+			name = "MiniSocialAppTests";
+			productname = "MiniSocialAppTests";
+			productReference = 00E356EE1AD99517003FC87E /* MiniSocialAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* boilerPlate */ = {
+		13B07F861A680F5B00A75B9A /* MiniSocialApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "boilerPlate" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MiniSocialApp" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -266,9 +266,9 @@
 			);
 			dependencies = (
 			);
-			name = boilerPlate;
-			productName = boilerPlate;
-			productReference = 13B07F961A680F5B00A75B9A /* boilerPlate.app */;
+			name = "MiniSocialApp";
+			productName = "MiniSocialApp";
+			productReference = 13B07F961A680F5B00A75B9A /* MiniSocialApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -288,7 +288,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "boilerPlate" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MiniSocialApp" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -301,8 +301,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* boilerPlate */,
-				00E356ED1AD99517003FC87E /* boilerPlateTests */,
+				13B07F861A680F5B00A75B9A /* MiniSocialApp */,
+				00E356ED1AD99517003FC87E /* MiniSocialAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -369,15 +369,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate/Pods-boilerPlate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate/Pods-boilerPlate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerPlate/Pods-boilerPlate-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		166BD71A43100761050E2E12 /* [CP-User] [RNFB] Crashlytics Configuration */ = {
@@ -422,7 +422,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-boilerPlate-boilerPlateTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MiniSocialApp-MiniSocialAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,7 +444,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-boilerPlate-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MiniSocialApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -457,15 +457,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -474,15 +474,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate/Pods-boilerPlate-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate/Pods-boilerPlate-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerPlate/Pods-boilerPlate-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -491,15 +491,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boilerPlate-boilerPlateTests/Pods-boilerPlate-boilerPlateTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -509,7 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* boilerPlateTests.m in Sources */,
+				00E356F31AD99517003FC87E /* MiniSocialAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +527,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* boilerPlate */;
+			target = 13B07F861A680F5B00A75B9A /* MiniSocialApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -535,14 +535,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-boilerPlate-boilerPlateTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = boilerPlateTests/Info.plist;
+				INFOPLIST_FILE = "MiniSocialAppTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,19 +554,19 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/boilerPlate.app/boilerPlate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniSocialApp.app/MiniSocialApp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-boilerPlate-boilerPlateTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = boilerPlateTests/Info.plist;
+				INFOPLIST_FILE = "MiniSocialAppTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -578,22 +578,23 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/boilerPlate.app/boilerPlate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniSocialApp.app/MiniSocialApp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-boilerPlate.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-MiniSocialApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = boilerPlate/boilerPlate.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MiniSocialApp/MiniSocialApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = boilerPlate/Info.plist;
+				INFOPLIST_FILE = "MiniSocialApp/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "MiniSocialApp";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,8 +605,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = boilerPlate;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
+				PRODUCT_NAME = "MiniSocialApp";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -614,13 +615,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-boilerPlate.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-MiniSocialApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = boilerPlate/boilerPlate.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MiniSocialApp/MiniSocialApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = boilerPlate/Info.plist;
+				INFOPLIST_FILE = "MiniSocialApp/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "MiniSocialApp";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,8 +633,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = boilerPlate;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
+				PRODUCT_NAME = "MiniSocialApp";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -825,7 +827,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "boilerPlateTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MiniSocialAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -834,7 +836,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "boilerPlate" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MiniSocialApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -843,7 +845,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "boilerPlate" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MiniSocialApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

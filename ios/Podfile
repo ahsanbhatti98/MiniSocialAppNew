@@ -59,7 +59,7 @@ use_frameworks! :linkage => :static
 $RNFirebaseAsStaticFramework = true
 # Add me --- /\
 
-target 'boilerPlate' do
+target 'MiniSocialApp' do
   config = use_native_modules!
 
   use_react_native!(
@@ -68,7 +68,7 @@ target 'boilerPlate' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'boilerPlateTests' do
+  target 'MiniSocialAppTests' do
     inherit! :complete
     # Pods for testing
   end
