@@ -1,11 +1,12 @@
-import { MainContainer, PrimaryButton, Text } from '@components/index';
-import { logoutFirebase } from '@src/api/firebase';
+import {MainContainer, PrimaryButton, Text} from '@components/index';
 import React from 'react';
-import { View } from 'react-native';
-import { useDispatch } from 'react-redux';
-import { logout } from '../../../redux-store/reducers';
+import {View} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {logout} from '../../../redux-store/reducers';
+import {useFirebaseAuth} from '@src/hooks';
 
 export const Setting = () => {
+  const {logoutFirebase, loading} = useFirebaseAuth();
   // const navigation = useNavigation();
   const dispatch = useDispatch();
   return (
@@ -25,6 +26,8 @@ export const Setting = () => {
             dispatch(logout());
           }}
           title="Logout"
+          isLoading={loading}
+          disabled={loading}
         />
       </View>
     </MainContainer>

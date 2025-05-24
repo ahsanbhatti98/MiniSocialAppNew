@@ -14,27 +14,26 @@
 		2371E7AD1CF8442A88438A8F /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D00CC2755315443F87A12450 /* SF-Pro-Display-SemiboldItalic.otf */; };
 		27D0E9E3DB0448EA968B4EFC /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5086C5091FB40D9AF8B5B62 /* SF-Pro-Display-ThinItalic.otf */; };
 		2A3E9C253C104D39BFE526C8 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 558675D2F1714481A6BF4B52 /* SF-Pro-Display-RegularItalic.otf */; };
+		2D83AB5C4620A753B21A9496 /* Pods_MiniSocialApp_MiniSocialAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354A90C5D37774F87C5680BD /* Pods_MiniSocialApp_MiniSocialAppTests.framework */; };
 		38469FA6469A4C92A619517C /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B791B1CC04A43E6A730C15E /* SF-Pro-Display-MediumItalic.otf */; };
 		3CC476C0B5EE41D2A95928A1 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB6A2D6BD4F54D04816CEE26 /* SF-Pro-Display-Bold.otf */; };
 		410CDD56F2F4484ABE906ED4 /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04003F6659FA4298898B0C38 /* SF-Pro-Display-HeavyItalic.otf */; };
 		4654E90B2B8B4A28AA92749A /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F779D46120D444A2B215A7E3 /* SF-Pro-Display-BlackItalic.otf */; };
 		4D4C7B96CBDB4AA4B7017E4F /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EABED79144B64A6FBF69E5F1 /* SF-Pro-Display-BoldItalic.otf */; };
 		5DFCBE1E8DBF4EEEB821018D /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6432BEFD4BA941AAA71B4EFE /* SF-Pro-Display-Light.otf */; };
-		682253CC7F2B889DBD372FFA /* Pods_boilerPlate_boilerPlateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0A6773F39D610B3186E321 /* Pods_boilerPlate_boilerPlateTests.framework */; };
 		68830EC737724804B8ABE0C9 /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 731438C41B9A44C897ACC210 /* SF-Pro-Display-LightItalic.otf */; };
-		759AE437F24A2C7858107FAF /* Pods_boilerPlate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF168A3A1D092A46F701A53B /* Pods_boilerPlate.framework */; };
 		7FD7BBE9D543467AAED89C6E /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFB0D01060364497B49A5D7F /* SF-Pro-Display-Thin.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		825D34782EAA49FBBA4A2E4C /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE17D4ED3E334528B188A8C0 /* SF-Pro-Display-Semibold.otf */; };
 		972A3C2BD06B40CBA46BF961 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF05AAA404E54CE3B0EA9849 /* SF-Pro-Display-Medium.otf */; };
 		9FCF5995EA3441B9B6524A75 /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE1A6513A84148E593B66FFE /* SF-Pro-Display-Ultralight.otf */; };
-		A1151C642DC4F38E007F9356 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1151C632DC4F38E007F9356 /* StoreKit.framework */; };
 		A1894A822DA690340047C0D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1894A812DA690340047C0D4 /* GoogleService-Info.plist */; };
 		A9ABF730318C49B6B65DFBC5 /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75597B9F23664362973576FB /* SF-Pro-Display-UltralightItalic.otf */; };
 		B0E811972BAE48058D38A1AE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFB66B77D99C46ECB8C93898 /* SF-Pro-Display-Regular.otf */; };
 		B6B213C4A93404147DFCCB70 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3A40303B3D31933311A32C2D /* PrivacyInfo.xcprivacy */; };
 		C9D086A92A734CA18D69EC25 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13937BB2F46847E6AC4C47E7 /* SF-Pro-Display-Heavy.otf */; };
 		D5C2ACC4B6BC499A8B2BC1C8 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22F744709A9A4242A4FBC241 /* SF-Pro-Display-Black.otf */; };
+		F080C0E8D3E8832D403B136F /* Pods_MiniSocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A49923E6EA7578345FF3E4C /* Pods_MiniSocialApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,27 +42,27 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = "MiniSocialApp";
+			remoteInfo = MiniSocialApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* MiniSocialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MiniSocialAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* MiniSocialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSocialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MiniSocialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MiniSocialAppTests.m"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* MiniSocialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniSocialAppTests.m; sourceTree = "<group>"; };
 		04003F6659FA4298898B0C38 /* SF-Pro-Display-HeavyItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-HeavyItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-HeavyItalic.otf"; sourceTree = "<group>"; };
 		13937BB2F46847E6AC4C47E7 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Heavy.otf"; path = "../src/assets/fonts/SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MiniSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniSocialApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "MiniSocialApp/AppDelegate.h"; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "MiniSocialApp/AppDelegate.mm"; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MiniSocialApp/Images.xcassets"; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "MiniSocialApp/Info.plist"; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "MiniSocialApp/main.m"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* MiniSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MiniSocialApp/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = MiniSocialApp/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MiniSocialApp/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MiniSocialApp/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MiniSocialApp/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = MiniSocialApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		22F744709A9A4242A4FBC241 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Black.otf"; path = "../src/assets/fonts/SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		354A90C5D37774F87C5680BD /* Pods_MiniSocialApp_MiniSocialAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSocialApp_MiniSocialAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A40303B3D31933311A32C2D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = MiniSocialApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-MiniSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp.debug.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
-		3F0A6773F39D610B3186E321 /* Pods_boilerPlate_boilerPlateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerPlate_boilerPlateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		558675D2F1714481A6BF4B52 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-RegularItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-MiniSocialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp.release.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp/Pods-MiniSocialApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,9 +70,9 @@
 		731438C41B9A44C897ACC210 /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-LightItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; };
 		75597B9F23664362973576FB /* SF-Pro-Display-UltralightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-UltralightItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-UltralightItalic.otf"; sourceTree = "<group>"; };
 		7B791B1CC04A43E6A730C15E /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-MediumItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "MiniSocialApp/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MiniSocialApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig"; path = "Target Support Files/Pods-MiniSocialApp-MiniSocialAppTests/Pods-MiniSocialApp-MiniSocialAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		A1151C632DC4F38E007F9356 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9A49923E6EA7578345FF3E4C /* Pods_MiniSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1894A812DA690340047C0D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1BE0D242DA67CA70027A2FD /* MiniSocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MiniSocialApp.entitlements; path = MiniSocialApp/MiniSocialApp.entitlements; sourceTree = "<group>"; };
 		A5086C5091FB40D9AF8B5B62 /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-ThinItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
@@ -87,7 +86,6 @@
 		EE17D4ED3E334528B188A8C0 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Semibold.otf"; path = "../src/assets/fonts/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		EF05AAA404E54CE3B0EA9849 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Medium.otf"; path = "../src/assets/fonts/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		F779D46120D444A2B215A7E3 /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-BlackItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
-		FF168A3A1D092A46F701A53B /* Pods_boilerPlate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boilerPlate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682253CC7F2B889DBD372FFA /* Pods_boilerPlate_boilerPlateTests.framework in Frameworks */,
+				2D83AB5C4620A753B21A9496 /* Pods_MiniSocialApp_MiniSocialAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759AE437F24A2C7858107FAF /* Pods_boilerPlate.framework in Frameworks */,
-				A1151C642DC4F38E007F9356 /* StoreKit.framework in Frameworks */,
+				F080C0E8D3E8832D403B136F /* Pods_MiniSocialApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +114,7 @@
 				00E356F21AD99517003FC87E /* MiniSocialAppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = "MiniSocialAppTests";
+			path = MiniSocialAppTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -142,16 +139,15 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				3A40303B3D31933311A32C2D /* PrivacyInfo.xcprivacy */,
 			);
-			name = "MiniSocialApp";
+			name = MiniSocialApp;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1151C632DC4F38E007F9356 /* StoreKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				FF168A3A1D092A46F701A53B /* Pods_boilerPlate.framework */,
-				3F0A6773F39D610B3186E321 /* Pods_boilerPlate_boilerPlateTests.framework */,
+				9A49923E6EA7578345FF3E4C /* Pods_MiniSocialApp.framework */,
+				354A90C5D37774F87C5680BD /* Pods_MiniSocialApp_MiniSocialAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,8 +239,8 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = "MiniSocialAppTests";
-			productname = "MiniSocialAppTests";
+			name = MiniSocialAppTests;
+			productName = MiniSocialAppTests;
 			productReference = 00E356EE1AD99517003FC87E /* MiniSocialAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -266,8 +262,8 @@
 			);
 			dependencies = (
 			);
-			name = "MiniSocialApp";
-			productName = "MiniSocialApp";
+			name = MiniSocialApp;
+			productName = MiniSocialApp;
 			productReference = 13B07F961A680F5B00A75B9A /* MiniSocialApp.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -542,7 +538,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MiniSocialAppTests/Info.plist";
+				INFOPLIST_FILE = MiniSocialAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,7 +550,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minisocialapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniSocialApp.app/MiniSocialApp";
 			};
@@ -566,7 +562,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = "MiniSocialAppTests/Info.plist";
+				INFOPLIST_FILE = MiniSocialAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -578,7 +574,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minisocialapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniSocialApp.app/MiniSocialApp";
 			};
@@ -593,8 +589,8 @@
 				CODE_SIGN_ENTITLEMENTS = MiniSocialApp/MiniSocialApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "MiniSocialApp/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "MiniSocialApp";
+				INFOPLIST_FILE = MiniSocialApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniSocialApp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,8 +601,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
-				PRODUCT_NAME = "MiniSocialApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minisocialapp;
+				PRODUCT_NAME = MiniSocialApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -621,8 +617,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MiniSocialApp/MiniSocialApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "MiniSocialApp/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "MiniSocialApp";
+				INFOPLIST_FILE = MiniSocialApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniSocialApp;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,8 +629,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minisocialapp";
-				PRODUCT_NAME = "MiniSocialApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minisocialapp;
+				PRODUCT_NAME = MiniSocialApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -724,11 +720,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-Wl",
-					"-ld_classic",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -812,11 +804,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-Wl",
-					"-ld_classic",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

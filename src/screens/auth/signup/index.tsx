@@ -1,8 +1,7 @@
-import { signupFirebase } from '@src/api/firebase';
-import { Formik } from 'formik';
-import React, { useRef, useState } from 'react';
-import { TextInput, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import {Formik} from 'formik';
+import React, {useRef, useState} from 'react';
+import {TextInput, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import {
   CustomInput,
   CustomTouchable,
@@ -10,13 +9,15 @@ import {
   PrimaryButton,
   Text,
 } from '../../../components';
-import { NavigationService } from '../../../config';
-import { AuthRoutes } from '../../../constants';
-import { AuthSchema } from '../../../formik-schemas';
-import { SD } from '../../../utils';
+import {NavigationService} from '../../../config';
+import {AuthRoutes} from '../../../constants';
+import {AuthSchema} from '../../../formik-schemas';
+import {SD} from '../../../utils';
+import {useFirebaseAuth} from '@src/hooks';
 
 export const SignUp = () => {
   // const dispatch = useDispatch();
+  const {signupFirebase, loading} = useFirebaseAuth();
   const [hidePassword, setHidePassword] = useState(true);
   const fullNameRef = useRef<TextInput>(null!);
   const emailRef = useRef<TextInput>(null!);
@@ -98,6 +99,8 @@ export const SignUp = () => {
                 title="Sign Up"
                 onPress={() => handleSubmit()}
                 customStyles={{marginTop: SD.hp(20)}}
+                isLoading={loading}
+                disabled={loading}
               />
             </View>
 

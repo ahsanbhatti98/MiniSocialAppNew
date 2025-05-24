@@ -1,19 +1,23 @@
-import { useState, useCallback } from 'react';
+import {useState, useCallback} from 'react';
 import {
   createUserWithEmailAndPassword,
   getAuth,
   signInWithEmailAndPassword,
 } from '@react-native-firebase/auth';
-import { doc, getDoc, setDoc } from '@react-native-firebase/firestore';
-import { NavigationService } from '@src/config';
-import { store } from '@src/redux-store';
-import { setAuthentication, setUser } from '@src/redux-store/reducers';
-import { Toast } from '@src/utils';
-import { auth, db } from '../../firebaseConfig';
+import {doc, getDoc, setDoc} from '@react-native-firebase/firestore';
+import {NavigationService} from '@src/config';
+import {store} from '@src/redux-store';
+import {setAuthentication, setUser} from '@src/redux-store/reducers';
+import {Toast} from '@src/utils';
+import {auth, db} from '../../firebaseConfig';
+
+// Placeholder avatar URL
 
 export const useFirebaseAuth = () => {
   const [loading, setLoading] = useState(false);
-
+  const avatar = `https://i.pravatar.cc/150?img=${Math.floor(
+    Math.random() * 70,
+  )}`;
   const loginFirebase = useCallback(async (email: string, password: string) => {
     setLoading(true);
     try {
@@ -28,12 +32,19 @@ export const useFirebaseAuth = () => {
       const userRef = doc(db, 'users', uid);
       const userSnap = await getDoc(userRef);
 
-      const { name, email: userEmail, uid: userId } = userSnap.data() || {};
+      const {
+        name,
+        email: userEmail,
+        uid: userId,
+        avatar,
+      } = userSnap.data() || {};
 
       if (userSnap.exists) {
         Toast.success('Login successful');
         store.dispatch(setAuthentication(true));
-        store.dispatch(setUser({ name, email: userEmail, uid: userId }));
+        store.dispatch(
+          setUser({name, email: userEmail, uid: userId, avatar: avatar}),
+        );
       }
     } catch (err: any) {
       Toast.fail(err?.message || 'Login failed');
@@ -45,6 +56,7 @@ export const useFirebaseAuth = () => {
   const signupFirebase = useCallback(
     async (email: string, password: string, name: string) => {
       setLoading(true);
+
       try {
         const userCredentials = await createUserWithEmailAndPassword(
           auth,
@@ -65,6 +77,7 @@ export const useFirebaseAuth = () => {
           name,
           email,
           uid: userCredentials.user.uid,
+          avatar,
         });
 
         Toast.success('User created successfully');

@@ -5,3 +5,4 @@ export * from './usePaginatedQuery';
 export * from './useNotificationPermissions';
 export * from './useLanguage';
 export * from './useCrashlytics.ts';
+export * from './useFirebaseAuth.ts';

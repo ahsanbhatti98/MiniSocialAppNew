@@ -1,100 +1,69 @@
-import {CustomTouchable, FloatingBtn, MainContainer} from '@src/components';
-import {NavigationService} from '@src/config';
-import {useChatSessions, useCreateSession} from '@src/hooks/api';
-import {ChatHistoryResponseType, SessionListResponseType} from '@src/models';
-import React from 'react';
 import {
-  ActivityIndicator,
-  FlatList,
-  StyleSheet,
+  collection,
+  FirebaseFirestoreTypes,
+  getDocs,
+} from '@react-native-firebase/firestore';
+import {
+  CustomImage,
+  CustomTouchable,
+  MainContainer,
   Text,
-  View,
-} from 'react-native';
+} from '@src/components';
+import {useTypedSelector} from '@src/hooks';
+import React, {useEffect, useState} from 'react';
+import {FlatList, StyleSheet} from 'react-native';
+import {db} from '../../../../firebaseConfig';
+import {NavigationService} from '@src/config';
 
 export const Sessions = () => {
-  const {mutate: createSession} = useCreateSession();
+  const [users, setUsers] = useState<FirebaseFirestoreTypes.DocumentData[]>([]);
+  const currentUser = useTypedSelector(state => state.auth.user);
 
-  const {
-    data: sessions,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    isLoading,
-    isError,
-    refetch,
-  } = useChatSessions({enabled: true});
-  // } = useChatSessions({enabled: true});
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const querySnapshot = await getDocs(collection(db, 'users'));
+      const allUsers = querySnapshot.docs.map(doc => doc.data());
 
-  // console.log('sessions', sessions);
+      // Exclude current user
+      const otherUsers = allUsers.filter(u => u.uid !== currentUser?.uid);
+      setUsers(otherUsers || []);
+    };
 
-  const renderItem = ({item}: {item: SessionListResponseType}) => (
-    <CustomTouchable
-      style={styles.itemStyles}
-      onPress={() => {
-        NavigationService.navigate('App', {
-          screen: 'Chat',
-          params: {
-            sessionId: item?.id,
-          },
-        });
-      }}>
-      <Text>Session ID: {item.id}</Text>
-      <Text>Created At: {item.created_at}</Text>
-    </CustomTouchable>
-  );
+    fetchUsers();
+  }, []);
 
-  const renderFooter = () => {
-    if (!isFetchingNextPage) {
-      return null;
-    }
-    return (
-      <View style={{padding: 16}}>
-        <ActivityIndicator size="small" />
-      </View>
-    );
+  const handleChat = (receiver: any) => {
+    // console.log('Navigating to chat with:', receiver);
+    NavigationService.navigate('App', {
+      screen: 'Chat',
+      params: {
+        receiverId: receiver.uid,
+      },
+    });
   };
 
-  if (isLoading) {
-    return (
-      <View style={styles.loader}>
-        <ActivityIndicator size="large" />
-      </View>
-    );
-  }
-
-  if (isError) {
-    return (
-      <View style={styles.error}>
-        <Text>Something went wrong.</Text>
-        <CustomTouchable onPress={() => refetch()}>
-          <Text style={{color: 'blue'}}>Tap to retry</Text>
-        </CustomTouchable>
-      </View>
-    );
-  }
+  const renderItem = ({item}: any) => (
+    <CustomTouchable onPress={() => handleChat(item)} style={styles.itemStyles}>
+      <CustomImage
+        source={{uri: item.avatar || 'https://i.pravatar.cc/300'}}
+        style={{width: 40, height: 40, borderRadius: 20, marginRight: 12}}
+      />
+      <Text>{item.name}</Text>
+    </CustomTouchable>
+  );
 
   return (
     <MainContainer isFlatList>
       <FlatList
-        data={sessions as ChatHistoryResponseType[] | []}
-        keyExtractor={(item, index) => index.toString()}
+        data={users}
+        keyExtractor={item => item.uid}
         renderItem={renderItem}
-        contentContainerStyle={{paddingBottom: 16}}
-        ListFooterComponent={renderFooter}
-        onEndReached={() => {
-          if (hasNextPage && !isFetchingNextPage) {
-            fetchNextPage();
-          }
-        }}
-        onEndReachedThreshold={0.5}
+        contentContainerStyle={{padding: 16}}
       />
-      <FloatingBtn onPress={() => createSession()} />
     </MainContainer>
   );
 };
 
 const styles = StyleSheet.create({
-  itemStyles: {padding: 16, borderBottomWidth: 1, borderColor: '#ccc'},
-  loader: {flex: 1, justifyContent: 'center', alignItems: 'center'},
-  error: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  itemStyles: {padding: 16, flexDirection: 'row', alignItems: 'center'},
 });

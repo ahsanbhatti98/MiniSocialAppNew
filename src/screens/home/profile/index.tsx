@@ -1,82 +1,70 @@
-import {CustomTouchable} from '@src/components';
-import {NavigationService} from '@src/config';
-import {HomeRoutes} from '@src/constants';
+import {
+  CustomImage,
+  CustomTouchable,
+  MainContainer,
+  Text,
+} from '@src/components';
+import {useTypedSelector} from '@src/hooks';
 import {SD} from '@src/utils';
 import React from 'react';
-import {Button, ScrollView, View} from 'react-native';
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  withSpring,
-} from 'react-native-reanimated';
-import {mockData} from './mock-data';
+import {FlatList, View} from 'react-native';
+import Video from 'react-native-video';
+
+type Reel = {id: string; uri: string; liked: boolean};
+
+const reels: Reel[] = [
+  {id: '1', uri: 'https://www.w3schools.com/html/mov_bbb.mp4', liked: false},
+  {id: '2', uri: 'https://www.w3schools.com/html/mov_bbb.mp4', liked: false},
+  {id: '3', uri: 'https://www.w3schools.com/html/mov_bbb.mp4', liked: false},
+];
 
 export const Profile = () => {
-  const width = useSharedValue(120);
-  const height = useSharedValue(120);
+  const user = useTypedSelector(state => state.auth.user);
+  console.log('user in profile:', user);
 
-  const startAnimation = () => {
-    const randomWidth = Math.floor(Math.random() * 300) + 100;
-    const randomHeight = Math.floor(Math.random() * 300) + 100;
-    width.value = withSpring(randomWidth);
-    height.value = withSpring(randomHeight);
-  };
-
-  const animatedStyles = useAnimatedStyle(() => {
-    return {
-      width: width.value,
-      height: height.value,
-      backgroundColor: 'red',
-    };
-  });
+  const renderItem = ({item}: {item: Reel}) => (
+    <View style={{marginBottom: 20}}>
+      <Video
+        source={{uri: item.uri}}
+        style={{width: '100%', height: 300}}
+        resizeMode="cover"
+        repeat={false}
+        paused={false}
+        muted
+      />
+      <CustomTouchable>
+        <Text>❤️ Like</Text>
+      </CustomTouchable>
+    </View>
+  );
 
   return (
-    <ScrollView>
-      <Button title="Animate" onPress={startAnimation} />
-
-      <Animated.View style={[animatedStyles, {marginTop: SD.hp(50)}]} />
-
-      {/* <Button
-        title="Go to Details"
-        onPress={() =>
-          NavigationService.navigate('App', {
-            screen: HomeRoutes['Details'],
-          })
+    <MainContainer isFlatList>
+      <FlatList
+        ListHeaderComponent={() =>
+          user && (
+            <View style={{alignItems: 'center', marginVertical: 20}}>
+              {user.avatar && (
+                <CustomImage
+                  source={{uri: user.avatar}}
+                  style={{
+                    width: SD.hp(80),
+                    height: SD.hp(80),
+                    borderRadius: SD.hp(40),
+                    marginBottom: SD.hp(10),
+                  }}
+                />
+              )}
+              <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+                {user.name}
+              </Text>
+            </View>
+          )
         }
-      /> */}
-
-      {mockData?.map(item => (
-        <View key={item?.id} style={{padding: SD.hp(10)}}>
-          <CustomTouchable
-            // style={{borderWidth: 1}}
-            onPress={() => {
-              NavigationService.navigate('App', {
-                screen: HomeRoutes.Details,
-                params: {item},
-              });
-            }}>
-            <Animated.Image
-              // sharedTransitionTag={item?.id?.toString()}
-              // sharedTransitionStyle={sharedElementTransition}
-              source={{uri: item?.image}}
-              resizeMode="cover"
-              style={{width: SD.wp(100), height: SD.hp(100)}}
-            />
-          </CustomTouchable>
-        </View>
-      ))}
-    </ScrollView>
+        data={reels}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      />
+    </MainContainer>
   );
 };
-
-// const styles = StyleSheet.create({});
-
-// import { StackScreenProps } from '@react-navigation/stack';
-// import { AppStackParamList } from '@navigation/types/navigation.types';
-
-// type Props = StackScreenProps<AppStackParamList, 'Profile'>;
-
-// const ProfileScreen: React.FC<Props> = ({ navigation, route }) => {
-//   const { userId } = route.params;
-//   ...
-// };

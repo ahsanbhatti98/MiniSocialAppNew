@@ -5,7 +5,6 @@ import {
   PrimaryButton,
   Text,
 } from '@components/index';
-import {loginFirebase} from '@src/api/firebase';
 import {Formik} from 'formik';
 import React, {useRef, useState} from 'react';
 import {useTranslation} from 'react-i18next';
@@ -15,7 +14,9 @@ import {NavigationService} from '../../../config';
 import {AuthRoutes} from '../../../constants';
 import {AuthSchema} from '../../../formik-schemas';
 import {SD} from '../../../utils';
+import {useFirebaseAuth} from '@src/hooks';
 export const Login = () => {
+  const {loginFirebase, loading} = useFirebaseAuth();
   const dispatch = useDispatch();
   const {t} = useTranslation();
 
@@ -82,6 +83,8 @@ export const Login = () => {
               customStyles={{
                 marginTop: SD.hp(20),
               }}
+              isLoading={loading}
+              disabled={loading}
             />
           </View>
 

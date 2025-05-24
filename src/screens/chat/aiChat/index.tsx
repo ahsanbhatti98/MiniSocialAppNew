@@ -1,215 +1,102 @@
+import {useTypedSelector} from '@src/hooks';
+import {SD} from '@src/utils';
+import React, {useCallback, useEffect, useState} from 'react';
+import {StyleSheet} from 'react-native';
+import {ChatRoutesTypes} from './chat.types';
 import {RouteProp, useRoute} from '@react-navigation/native';
-import ChatUrls from '@src/api/chat/api.url';
-import {BASE_PATH, BASE_URL} from '@src/api/config';
-import {CustomImage, CustomTouchable, Text} from '@src/components';
-import {Images} from '@src/config';
-import {useChatHistory} from '@src/hooks/api';
-import {SD, TokenService} from '@src/utils';
-import React, {useEffect, useRef, useState} from 'react';
 import {
-  ActivityIndicator,
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  TextInput,
-  View,
-} from 'react-native';
-import Animated, {
-  SlideInLeft,
-  SlideInRight,
-  useAnimatedStyle,
-} from 'react-native-reanimated';
-import EventSource from 'react-native-sse';
-import 'react-native-url-polyfill/auto';
-import uuid from 'react-native-uuid'; // Optional: Better unique IDs
-import {ChatRoutesTypes, MessageType} from './chat.types';
+  addDoc,
+  collection,
+  onSnapshot,
+  orderBy,
+  query,
+  serverTimestamp,
+} from '@react-native-firebase/firestore';
+import {db} from '../../../../firebaseConfig';
+import {GiftedChat} from 'react-native-gifted-chat';
+
+type Message = {
+  _id: string;
+  text: any;
+  createdAt: any;
+  user: any;
+};
 
 export const Chat = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
+
   const route = useRoute<RouteProp<ChatRoutesTypes, 'ChatScreen'>>();
-  const {sessionId} = route.params;
+  const receiverId = route.params?.receiverId; // You must pass this from previous screen
 
-  const [accessToken, setAccessToken] = useState<string | null>();
+  console.log('Chat screen receiverId:', receiverId);
 
-  const getToken = async () => {
-    const tokens = await TokenService.getTokens();
-    const token = tokens?.accessToken;
-    setAccessToken(token);
-  };
+  const user = useTypedSelector(state => state.auth.user);
 
-  const [sendLoader, setSendLoader] = useState(false);
-  const [text, setText] = useState('');
-
-  const [messages, setMessages] = useState<MessageType[]>([]);
-  const scrollRef = useRef<FlatList | null>(null);
-  const eventSourceRef = useRef<EventSource | null>(null);
+  const chatId = [user?.uid, receiverId].sort().join('_'); // stable chatId for both users
 
   useEffect(() => {
-    getToken();
-  }, [accessToken]);
-
-  const {
-    data: sessions,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    isLoading,
-  } = useChatHistory({enabled: true, sessionId});
-  // } = useChatHistory({enabled: true, sessionId: '681c7f8e052b5334d2d4936b'});
-
-  const handleStreamClick = async () => {
-    eventSourceRef.current = new EventSource(
-      `${BASE_URL}${BASE_PATH}${
-        ChatUrls.streamChat
-      }?session_id=${sessionId}&user_query=${encodeURIComponent(text)}`,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${accessToken}`,
-        },
-        method: 'GET',
-      },
-    );
-
-    setText('');
-    setSendLoader(true);
-    let accumulatedText = '';
-    const messageId = uuid.v4(); // Better unique ID
-
-    // Create placeholder bot message
-    setMessages(prev => [
-      {
-        _id: messageId,
-        text: '',
-        createdAt: new Date(),
-        user: {_id: 2, name: 'AI'},
-      },
-      ...prev,
-    ]);
-
-    eventSourceRef.current.addEventListener('message', event => {
-      try {
-        const data = event.data ? JSON.parse(event.data) : null;
-
-        if (data?.event === 'completed') {
-          handleStopStream();
-          setSendLoader(false);
-          return;
-        }
-
-        accumulatedText += data?.data || '';
-
-        setMessages(prev =>
-          prev.map(msg =>
-            msg._id === messageId ? {...msg, text: accumulatedText} : msg,
-          ),
-        );
-      } catch (error) {
-        console.log('SSE parse error:', error);
-        handleStopStream();
-        setSendLoader(false);
-      }
-    });
-  };
-
-  const handleStopStream = () => {
-    eventSourceRef.current?.close();
-    eventSourceRef.current = null;
-  };
-
-  const handleSend = async () => {
-    if (!text.trim()) {
+    if (!user?.uid || !receiverId) {
+      console.log('User or receiverId not available');
       return;
     }
-    const newMsg = {
-      _id: uuid.v4(),
-      text: text.trim(),
-      createdAt: new Date(),
-      user: {_id: 1, name: 'You'},
-    };
-    setMessages(prev => [newMsg, ...prev]);
-    await handleStreamClick();
-  };
+    // console.log('Chat ID:', chatId,db);
+    if (!chatId) return;
 
-  const animatedStyles = useAnimatedStyle(() => {
-    return {
-      width: '100%',
-    };
-  });
-  const renderMessage = ({item}: {item: MessageType}) => {
-    const isUser = item.user._id === 1;
-    return (
-      <View
-        style={[
-          styles.messageBubble,
-          isUser ? styles.userBubble : styles.botBubble,
-        ]}>
-        <Animated.View
-          entering={(isUser ? SlideInRight : SlideInLeft)
-            .springify()
-            .damping(15)
-            .mass(0.5)}
-          style={animatedStyles}>
-          <Text>{item.text}</Text>
-        </Animated.View>
-      </View>
+    const q = query(
+      collection(db, 'chats', chatId, 'messages'),
+      orderBy('createdAt', 'desc'),
     );
-  };
 
-  useEffect(() => {
-    if (messages.length > 0) {
-      scrollRef.current?.scrollToOffset({animated: true, offset: 0});
-    }
-  }, [messages]);
+    console.log('Chat query:', q);
+
+    const unsubscribe = onSnapshot(q, querySnapshot => {
+      const msgs =
+        querySnapshot?.docs?.length > 0
+          ? querySnapshot.docs.map(doc => {
+              const data = doc?.data?.() || {};
+              return {
+                _id: doc.id,
+                text: data.text,
+                createdAt: data.createdAt?.toDate?.() || new Date(),
+                user: data.user,
+              };
+            })
+          : [];
+      setMessages(msgs);
+    });
+
+    return () => unsubscribe();
+  }, [chatId]);
+
+  const onSend = useCallback(
+    (newMessages: Message[] = []) => {
+      if (!newMessages[0]) return;
+      const {_id, text} = newMessages[0];
+
+      addDoc(collection(db, 'chats', chatId, 'messages'), {
+        _id,
+        text,
+        createdAt: serverTimestamp(),
+        user: {
+          _id: user?.uid ?? '',
+          name: user?.name,
+          avatar: user?.avatar || '', // Optional avatar
+        },
+      });
+    },
+    [chatId, user],
+  );
 
   return (
-    <SafeAreaView style={styles.container}>
-      {isLoading ? (
-        <View style={styles.loaderContainer}>
-          <ActivityIndicator size="large" />
-        </View>
-      ) : (
-        <FlatList
-          ref={scrollRef}
-          data={[...messages, ...((sessions as MessageType[]) || [])]}
-          keyExtractor={item => item._id.toString()}
-          renderItem={renderMessage}
-          contentContainerStyle={styles.chatContainer}
-          inverted
-          onEndReached={() => {
-            if (hasNextPage && !isFetchingNextPage) {
-              fetchNextPage();
-            }
-          }}
-          onEndReachedThreshold={1}
-          ListFooterComponent={
-            isFetchingNextPage ? <ActivityIndicator size="small" /> : null
-          }
-        />
-      )}
-
-      {/* Input Toolbar */}
-      <View style={styles.inputContainer}>
-        <TextInput
-          multiline
-          value={text}
-          onChangeText={setText}
-          placeholder="Ask your AI assistant..."
-          placeholderTextColor="#aaa"
-          style={styles.textInput}
-        />
-        {sendLoader ? (
-          <ActivityIndicator
-            style={{marginLeft: 10}}
-            size="small"
-            color="black"
-          />
-        ) : (
-          <CustomTouchable onPress={handleSend} hitSlop={10}>
-            <CustomImage source={Images.AddIcon} style={styles.sendIcon} />
-          </CustomTouchable>
-        )}
-      </View>
-    </SafeAreaView>
+    <GiftedChat
+      messages={messages}
+      onSend={onSend}
+      user={{
+        _id: user?.uid ?? 'userAnonymous',
+        name: user?.name,
+        avatar: user?.avatar || '',
+      }}
+    />
   );
 };
 

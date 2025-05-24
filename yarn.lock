@@ -1754,6 +1754,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo/react-native-action-sheet@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@expo/react-native-action-sheet@npm:4.1.1"
+  dependencies:
+    "@types/hoist-non-react-statics": ^3.3.1
+    hoist-non-react-statics: ^3.3.0
+  peerDependencies:
+    react: ">=18.0.0"
+  checksum: eea30883f4ef3b8793630080191d2e47a07747ec316c00821203daa0d2b4bedf983b2a9171e7709ed30b8d5f149efd6e98f944c3c4c7eab936cfd0af592b3642
+  languageName: node
+  linkType: hard
+
 "@firebase/analytics-compat@npm:0.2.17":
   version: 0.2.17
   resolution: "@firebase/analytics-compat@npm:0.2.17"
@@ -3125,12 +3137,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-firebase/firestore@npm:^22.2.0":
-  version: 22.2.0
-  resolution: "@react-native-firebase/firestore@npm:22.2.0"
+"@react-native-firebase/firestore@npm:^21.13.0":
+  version: 21.14.0
+  resolution: "@react-native-firebase/firestore@npm:21.14.0"
   peerDependencies:
-    "@react-native-firebase/app": 22.2.0
-  checksum: e29bf1466e4166da267671479c4146c3768b321622ba7776e88b66e28b3b50b3a31748d10a57027437e17c75402f089b3bf3052e96f26d5a839fce7f84d1092b
+    "@react-native-firebase/app": 21.14.0
+  checksum: cd48ba04f61dca376c81a146eb2838b6694bfefaa2abef048e6a4567cc241e0d61f3c1d5017483231482a775253517124d9a18cffe2f0485be4f0cb01a9794f5
   languageName: node
   linkType: hard
 
@@ -3861,6 +3873,22 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: e60b153664572116dfea673c5bda7778dbff150498f44f998e34b5886d8afc47f16799280e4b6e241c0472aef1bc36add771c569c68fc5125fc2ae519a3eb9ac
+  languageName: node
+  linkType: hard
+
+"@types/lodash.isequal@npm:^4.5.8":
+  version: 4.5.8
+  resolution: "@types/lodash.isequal@npm:4.5.8"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: f3180c2d2925514fff1908a1303c11468c9f39b47fd7b053416aad3f1447f8e4a9894dd0460187ac9ac19387e25aec8dd8214d13a50a0967e0dc9cca8e4c5353
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.17.17
+  resolution: "@types/lodash@npm:4.17.17"
+  checksum: cfa34a752f3c540a196e9f92dbaff93ae15fe4058da8cce1918dd9219076dc19eec33b043aae45865e2b3ef8234a845bb57366144ec8e52551e2bc3f119e04a1
   languageName: node
   linkType: hard
 
@@ -5488,7 +5516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.8.15":
+"dayjs@npm:^1.11.13, dayjs@npm:^1.8.15":
   version: 1.11.13
   resolution: "dayjs@npm:1.11.13"
   checksum: f388db88a6aa93956c1f6121644e783391c7b738b73dbc54485578736565c8931bdfba4bb94e9b1535c6e509c97d5deb918bbe1ae6b34358d994de735055cca9
@@ -8643,6 +8671,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.isequal@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "lodash.isequal@npm:4.5.0"
+  checksum: da27515dc5230eb1140ba65ff8de3613649620e8656b19a6270afe4866b7bd461d9ba2ac8a48dcc57f7adac4ee80e1de9f965d89d4d81a0ad52bb3eec2609644
+  languageName: node
+  linkType: hard
+
 "lodash.isplainobject@npm:^4.0.6":
   version: 4.0.6
   resolution: "lodash.isplainobject@npm:4.0.6"
@@ -9301,7 +9336,7 @@ __metadata:
     "@react-native-firebase/app": ^21.13.0
     "@react-native-firebase/auth": ^21.13.0
     "@react-native-firebase/crashlytics": ^21.13.0
-    "@react-native-firebase/firestore": ^22.2.0
+    "@react-native-firebase/firestore": ^21.13.0
     "@react-native-firebase/messaging": ^21.13.0
     "@react-native-google-signin/google-signin": ^13.2.0
     "@react-native-masked-view/masked-view": ^0.3.2
@@ -9341,6 +9376,7 @@ __metadata:
     react-native-date-picker: ^5.0.12
     react-native-dotenv: ^3.4.11
     react-native-gesture-handler: ^2.20.0
+    react-native-gifted-chat: ^2.8.1
     react-native-keyboard-controller: ^1.17.1
     react-native-keyboard-manager: ^6.5.16-0
     react-native-keychain: ^10.0.0
@@ -9358,6 +9394,7 @@ __metadata:
     react-native-svg-transformer: ^1.5.0
     react-native-url-polyfill: ^2.0.0
     react-native-uuid: ^2.0.3
+    react-native-video: ^6.14.0
     react-redux: ^9.1.2
     react-test-renderer: 18.3.1
     redux-persist: ^6.0.0
@@ -10152,7 +10189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.x, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10318,6 +10355,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-communications@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "react-native-communications@npm:2.2.1"
+  checksum: 0b1a63a116a34866d06790b0dd1153ff622aba148a8ad7d87e18e0ba6c2cfa545210be0d04f3428341a72fbcbd09ac95ea38b92197856cb0fda67bca2321e07b
+  languageName: node
+  linkType: hard
+
 "react-native-date-picker@npm:^5.0.12":
   version: 5.0.12
   resolution: "react-native-date-picker@npm:5.0.12"
@@ -10350,6 +10394,36 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 51b155bcc56043b9e06bf8ded089c44348e8da297b38e73f203f2d6ce8bd51698f85a38dca8eeab3d2ab721aeddefc270acd99e16cf493b20f1f429ad02214b8
+  languageName: node
+  linkType: hard
+
+"react-native-gifted-chat@npm:^2.8.1":
+  version: 2.8.1
+  resolution: "react-native-gifted-chat@npm:2.8.1"
+  dependencies:
+    "@expo/react-native-action-sheet": ^4.1.1
+    "@types/lodash.isequal": ^4.5.8
+    dayjs: ^1.11.13
+    lodash.isequal: ^4.5.0
+    react-native-communications: ^2.2.1
+    react-native-iphone-x-helper: ^1.3.1
+    react-native-lightbox-v2: ^0.9.2
+    react-native-parsed-text: ^0.0.22
+  peerDependencies:
+    react: ">=18.0.0"
+    react-native: "*"
+    react-native-keyboard-controller: ">=1.0.0"
+    react-native-reanimated: ">=3.0.0"
+  checksum: e421fec95e9391e0676f523f3fe75178414b940fce58f58db7a1e5cf0e3f6499153df0155caacd2c922ddeb3796024ee56343570af9625b0c5ffa1d3970d9f67
+  languageName: node
+  linkType: hard
+
+"react-native-iphone-x-helper@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "react-native-iphone-x-helper@npm:1.3.1"
+  peerDependencies:
+    react-native: ">=0.42.0"
+  checksum: 024376646009a966e33e12fc2358751830818b0fb73b1c601a64eb5e490d2dc43eec23668991b985a8c412a84d087f20eb45bb9b593567c08b66e741b7bddda5
   languageName: node
   linkType: hard
 
@@ -10392,6 +10466,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-lightbox-v2@npm:^0.9.2":
+  version: 0.9.2
+  resolution: "react-native-lightbox-v2@npm:0.9.2"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-native: ">=0.61.0"
+  checksum: b55783a0c629010dead4f9b9d449207853d31f2c577fc11f5db1527fddbd5fdd8a8e6122abfba79e12c619cf00fd0c4072b72a2b840425fdbf81ae419d4e9580
+  languageName: node
+  linkType: hard
+
 "react-native-localize@npm:^3.4.1":
   version: 3.4.1
   resolution: "react-native-localize@npm:3.4.1"
@@ -10413,6 +10497,18 @@ __metadata:
     react: "*"
     react-native: ">=0.71.0"
   checksum: 8c79504a89fefd7f9c290a4a6bb24f1f9ef9e2a69d20d0f7d882b89f3943556e9c919c9d46583e44ab698f25213489277fccb6d4c856cce310267c5f907388f1
+  languageName: node
+  linkType: hard
+
+"react-native-parsed-text@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "react-native-parsed-text@npm:0.0.22"
+  dependencies:
+    prop-types: ^15.7.x
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: a8672a50bbc60c9d925b8935b484cda2ed976483fce156f31b497d799eb349b24b79934aa683576e606e3fd3d8d97877d0048eba95f702f15ae21263c2658fd5
   languageName: node
   linkType: hard
 
@@ -10559,6 +10655,16 @@ __metadata:
   version: 2.0.3
   resolution: "react-native-uuid@npm:2.0.3"
   checksum: e47774481feaed5d38f75fb4b03f5189c03e7452038f1b0fa56677add8a8bdef64ec7ad5e83f9fa761d8788cac5c8e554ade07e82a2818145337df7c883e2124
+  languageName: node
+  linkType: hard
+
+"react-native-video@npm:^6.14.0":
+  version: 6.14.0
+  resolution: "react-native-video@npm:6.14.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 3da3ccab377cf84926725be5263eeeba0d45368ef522de993331d9f7bb8ea6cbe9dd4cf9240901595910c3e150bda30fe9456382d58b556018e00dac33ee89bc
   languageName: node
   linkType: hard
 

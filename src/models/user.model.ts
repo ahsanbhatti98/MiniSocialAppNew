@@ -7,13 +7,8 @@ export type Permission = {
 };
 
 export type UserModel = {
-  token_api_user: string; // Token for API authentication
-  id_user: number; // Unique ID of the user
-  login: string; // Login email of the user
-  name: string; // Name of the user
-  fecha_login: string; // Date and time of the last login
-  id_emp: number; // Employee ID
-  job_title: string; // Job title of the user
-  rol_name: string; // Role name (e.g., "SALES REPRESENTATIVE")
-  permissions: Permission[]; // Array of permissions for different modules
+  name: string; // User's name
+  email: string; // User's email
+  uid: string; // User's unique identifier
+  avatar: string; // User's avatar URL
 };
