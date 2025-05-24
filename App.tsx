@@ -1,18 +1,20 @@
 import '@i18n/i18n'; // 👈 make sure to import
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import React, {useEffect} from 'react';
-import {Platform, StatusBar} from 'react-native';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import React, { useEffect } from 'react';
+import { Platform, StatusBar } from 'react-native';
 import 'react-native-gesture-handler';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import KeyboardManager from 'react-native-keyboard-manager';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {useNotificationPermissions, useTheme} from './src/hooks';
-import {RootNavigator} from './src/navigation';
-import Purchases, {LOG_LEVEL} from 'react-native-purchases';
+import Purchases, { LOG_LEVEL } from 'react-native-purchases';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useNotificationPermissions, useTheme } from './src/hooks';
+import { RootNavigator } from './src/navigation';
 
 if (Platform.OS === 'ios') {
   KeyboardManager.setEnable(true);
 }
+
+// initializeApp(firebaseConfig);
 
 const App: React.FC = () => {
   const {requestUserPermission} = useNotificationPermissions();

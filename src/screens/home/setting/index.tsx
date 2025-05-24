@@ -1,9 +1,9 @@
-import {MainContainer, PrimaryButton, Text} from '@components/index';
+import { MainContainer, PrimaryButton, Text } from '@components/index';
+import { logoutFirebase } from '@src/api/firebase';
 import React from 'react';
-import {View} from 'react-native';
-import {useDispatch} from 'react-redux';
-import {setAuthentication} from '../../../redux-store/reducers';
-import {TokenService} from '@src/utils';
+import { View } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../../redux-store/reducers';
 
 export const Setting = () => {
   // const navigation = useNavigation();
@@ -21,8 +21,8 @@ export const Setting = () => {
         }}>
         <PrimaryButton
           onPress={async () => {
-            await TokenService.clearTokens();
-            dispatch(setAuthentication(false));
+            logoutFirebase();
+            dispatch(logout());
           }}
           title="Logout"
         />
